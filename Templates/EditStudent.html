@@ -1,0 +1,33 @@
+{% extends "Basic.html" %}
+
+{% block title %}
+    Edit Student
+{% endblock %}
+
+{% block content %}
+
+<div class = "container p-3" >
+
+    <h2>Update Student Details Here</h2><br/>
+
+    <form  method = "post">
+
+        {% csrf_token %}
+
+        <input type = "text" name = "tbname" value = {{student.Name}} class = "form-control" placeholder = "Enter your name here"/><br/><br/>
+
+        <input type = "text" name = "tbage" value = {{student.Age}} class = "form-control" placeholder = "Enter your age here"/><br/><br/>
+
+        <input type = "text" name = "tbcity" value = {{student.City}} class = "form-control" placeholder = "Enter your city here"/><br/><br/>
+
+        <input type = "text" name = "tbemail" value = {{student.Email}} class = "form-control" placeholder = "Enter your email here"/><br/><br/>
+
+        <input type = "text" name = "tbphone" value = {{student.Phone}} class = "form-control" placeholder = "Enter your phone number here"/><br/><br/>
+
+        <input class = " btn btn-warning form-control" type = "submit" value = "Edit Student" />
+
+    </form>
+
+</div>
+
+{% endblock %}

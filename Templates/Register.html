@@ -1,0 +1,52 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+Register Page
+{% endblock %}
+
+{% block nav %}
+
+<div class="container" align="center">
+
+    <h1 style="color:green">Register Page</h1>
+
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container" align="center">
+
+    <div class="card" style="width: 40rem;">
+
+        <div class="card-body">
+
+            <h5 class="card-title">Enter Your Details Here</h5>
+            {{login}}
+
+            <form method = "post">
+
+                {% csrf_token %}
+                <input type = "text" name = "tbusername" class = "form-control" placeholder = "Enter your UserName"/><br/><br/>
+
+                <input type = "text" name = "tbemail" class = "form-control" placeholder = "Enter your Email"/><br/><br/>
+
+                <input type = "password" name = "tbpass1" class = "form-control" placeholder = "Enter your Password"/><br/><br/>
+
+                <input type = "password" name = "tbpass2" class = "form-control" placeholder = "Confirm Password" /><br/><br/>
+
+                <input type = "submit" class = "form-control btn btn-primary" value = "Register"><br/><br/>
+
+            </form>
+
+            <a href = "{% url 'login' %}" class = "btn btn-outline-success mt-3"> Already Registered Click here to Login </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+

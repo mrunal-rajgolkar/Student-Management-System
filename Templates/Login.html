@@ -1,0 +1,49 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+    Login Page
+{% endblock%}
+
+{% block nav %}
+
+<div class = "container" align = "center">
+
+    <h2 class = "text-danger">Login Page</h2>
+
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class = "container" align = "center">
+
+    <div class="card " style="width: 40rem;">
+
+        <div class="card-body">
+
+            <h5 class="card-title">Enter Login Details Here</h5>
+
+            <form method = "post">
+
+                {% csrf_token %}
+
+                <input type = "text" name = "tbusername" placeholder = "Enter Your Username Here"/><br/><br/>
+
+                <input type = "password" name = "tbpass1" placeholder = "Enter Your Password Here"/><br/><br/>
+
+                <input type = "submit" value = "Login"/><br/><br/>
+
+            </form>
+
+            <a href="{% url 'register' %}" class="btn btn-outline-primary">Not registerd Click Here To Register</a>
+
+        </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}
+
+

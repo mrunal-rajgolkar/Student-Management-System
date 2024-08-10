@@ -1,0 +1,33 @@
+{% extends "Basic.html" %}
+
+{% block title %}
+    Add Student
+{% endblock %}
+
+{% block content %}
+
+<div class = "container p-3" >
+
+    <h2>Enter Student Details Here</h2><br/>
+
+    <form action = "" method = "post">
+
+        {% csrf_token %}
+
+        <input type = "text" name = "tbname" class = "form-control" placeholder = "Enter your name here"/><br/><br/>
+
+        <input type = "text" name = "tbage" class = "form-control" placeholder = "Enter your age here"/><br/><br/>
+
+        <input type = "text" name = "tbcity" class = "form-control" placeholder = "Enter your city here"/><br/><br/>
+
+        <input type = "text" name = "tbemail" class = "form-control" placeholder = "Enter your email here"/><br/><br/>
+
+        <input type = "text" name = "tbphone" class = "form-control" placeholder = "Enter your phone number here"/><br/><br/>
+
+        <input class = " btn btn-success form-control" type = "submit" value = "Add Students" />
+
+    </form>
+
+</div>
+
+{% endblock %}
